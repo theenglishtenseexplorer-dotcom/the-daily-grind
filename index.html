@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d35">
+  <title>The Daily Grind — Chapter 1</title>
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div><p class="eyebrow">BUHAY BARANGAY PRESENTS</p><h1>The Daily Grind</h1></div>
+      <div class="hud"><span>₱ <b id="wallet">2,500</b></span><span>Mon, Nov 24 · <b id="clock">10:30 AM</b></span></div>
+    </header>
+    <section class="game-shell">
+      <div class="game-heading"><div><span class="chapter">CHAPTER 1</span><h2 id="sceneTitle">Barangay San Isidro</h2></div><p id="status" aria-live="polite">Choose a destination to start walking.</p></div>
+      <div class="stage-wrap" id="stageWrap">
+        <canvas id="gameCanvas" aria-label="Isometric neighborhood map. Select a location to walk there."></canvas>
+        <div class="interior hidden" id="interior">
+          <div class="interior-art" id="interiorArt"><span class="scene-emoji">🏪</span></div>
+          <div class="interior-copy"><span class="chapter">LOCATION</span><h2 id="interiorName">Aling Nena’s Sari-Sari Store</h2><p id="interiorDesc">A familiar neighborhood stop.</p><button id="exitButton" class="primary">🚪 Step Outside</button></div>
+        </div>
+        <div class="map-hint" id="mapHint">Click a glowing location marker to walk there</div>
+      </div>
+      <footer class="controls"><span>🕹 Click a destination</span><span>👆 Tap a destination on mobile</span><span id="saveState">Progress saves on this device</span></footer>
+    </section>
+    <section class="destination-list" aria-label="Destinations">
+      <button data-destination="store"><span>🏪</span><b>Sari-Sari Store</b><small>Aling Nena</small></button>
+      <button data-destination="carinderia"><span>🍲</span><b>Karinderya</b><small>Kuya Jun</small></button>
+      <button data-destination="plaza"><span>🌳</span><b>Barangay Plaza</b><small>Mika’s hangout</small></button>
+      <button data-destination="office"><span>🏢</span><b>Skyline Enterprises</b><small>Job interview</small></button>
+    </section>
+    <p class="footnote">Prototype 0.1 · Movement and scene-transition foundation. Art, dialogue, and full game systems will be developed in later milestones.</p>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
