@@ -1,7 +1,7 @@
 import {nodes,edges,destinations} from './world.js';
 const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 export class MovementController{
-  constructor(onArrive){this.onArrive=onArrive;this.position={...nodes.start};this.route=[];this.target=null;this.speed=.42;this.moving=false;this.destination=null;this.lastProgress=0;}
+  constructor(onArrive){this.onArrive=onArrive;this.position={...nodes.start};this.route=[];this.target=null;this.speed=.11;this.moving=false;this.destination=null;this.lastProgress=0;}
   get locked(){return this.moving||!!this.destination;}
   findPath(startName,endName){
     const graph={}; for(const name of Object.keys(nodes))graph[name]=[];
